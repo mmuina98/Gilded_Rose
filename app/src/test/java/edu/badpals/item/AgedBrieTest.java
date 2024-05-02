@@ -32,5 +32,4 @@ public class AgedBrieTest {
         assertEquals(22,zero.getQuality()) ;
     }
 
-
 }
