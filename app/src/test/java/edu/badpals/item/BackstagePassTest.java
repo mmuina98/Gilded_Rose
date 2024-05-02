@@ -1,3 +1,4 @@
+
 package edu.badpals.item;
 
 import org.junit.jupiter.api.Test;
@@ -14,30 +15,154 @@ public class BackstagePassTest {
     }
 
     @Test
-    public void testSellInZero(){
-        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 12, 20);
+    public void testQualityOver10Days(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 20, 20);
         zero.update_quality();
-        assertEquals(21,zero.getQuality()) ;
+        assertEquals(21,zero.getSellIn()) ;
     }
 
     @Test
-    public void testSellInPositive(){
-        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 5, 20);
-        zero.update_quality();
-        assertEquals(23,zero.getQuality()) ;
-    }
-
-    @Test
-    public void testSellInPositive(){
-        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 5, 20);
-        zero.update_quality();
-        assertEquals(23,zero.getQuality()) ;
-    }
-    @Test
-    public void testSellInNegative(){
+    public void testQualityUnderOr10Days(){
         BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 10, 20);
         zero.update_quality();
-        assertEquals(22,zero.getQuality()) ;
+        assertEquals(22,zero.getSellIn()) ;
     }
+
+    @Test
+    public void testQualityUnderOr5Days(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 5, 20);
+        zero.update_quality();
+        assertEquals(23,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQuality1Day(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 1, 20);
+        zero.update_quality();
+        assertEquals(23,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQuality0Day(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 0, 20);
+        zero.update_quality();
+        assertEquals(0,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityNegativeDays(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", -1, 20);
+        zero.update_quality();
+        assertEquals(0,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityOver10DaysLimit50(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 20, 50);
+        zero.update_quality();
+        assertEquals(50,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityUnder10DaysLimit50(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 10, 50);
+        zero.update_quality();
+        assertEquals(50,zero.getSellIn()) ;
+    }
+    @Test
+    public void testQualityOver5DaysLimit50(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 5, 50);
+        zero.update_quality();
+        assertEquals(50,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityUnder0DaysLimit50(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", -1, 50);
+        zero.update_quality();
+        assertEquals(0,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityOver10DaysLimit49(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 20, 49);
+        zero.update_quality();
+        assertEquals(50,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityUnder10DaysLimit49(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 10, 49);
+        zero.update_quality();
+        assertEquals(50,zero.getSellIn()) ;
+    }
+    @Test
+    public void testQualityOver5DaysLimit49(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 5, 49);
+        zero.update_quality();
+        assertEquals(50,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityUnder0DaysLimit49(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", -1, 49);
+        zero.update_quality();
+        assertEquals(0,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityOver10DaysLimit48(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 20, 48);
+        zero.update_quality();
+        assertEquals(49,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityUnder10DaysLimit48(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 10, 48);
+        zero.update_quality();
+        assertEquals(50,zero.getSellIn()) ;
+    }
+    @Test
+    public void testQualityOver5DaysLimit48(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 5, 48);
+        zero.update_quality();
+        assertEquals(50,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityUnder0DaysLimit48(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", -1, 48);
+        zero.update_quality();
+        assertEquals(0,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityOver10DaysLimit47(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 20, 47);
+        zero.update_quality();
+        assertEquals(48,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityUnder10DaysLimit47(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 10, 47);
+        zero.update_quality();
+        assertEquals(49,zero.getSellIn()) ;
+    }
+    @Test
+    public void testQualityOver5DaysLimit47(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 5, 47);
+        zero.update_quality();
+        assertEquals(50,zero.getSellIn()) ;
+    }
+
+    @Test
+    public void testQualityUnder0DaysLimit48(){
+        BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", -1, 48);
+        zero.update_quality();
+        assertEquals(0,zero.getSellIn()) ;
+    }
+
 
 }
