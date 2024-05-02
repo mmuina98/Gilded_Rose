@@ -7,10 +7,12 @@ public class NormalItem extends Item implements Updateable{
          super(name,sellIn, quality);
     }
 
+    @Override
     public int getQuality(){
          return this.quality;
     }
 
+    @Override
     public int getSellIn(){
         return this.sellIn;
     }
