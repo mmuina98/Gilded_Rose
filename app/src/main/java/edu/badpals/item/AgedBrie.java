@@ -25,9 +25,9 @@ public class AgedBrie extends Item implements Updateable  {
     @Override
     public void update_quality() {
 
-        if (this.sellIn <= 0){
+        if (this.sellIn <= 0 && this.quality <= 48){
             this.quality += 2 ;
-        } else {
+        } else if(this.quality <= 49) {
             this.quality += 1 ;
         }
 
