@@ -32,5 +32,33 @@ public class NormalItemTest {
         assertEquals(18,zero.getQuality()) ;
     }
 
+    @Test
+    public void testQualityEqualsOne(){
+        NormalItem zero = new NormalItem("+5 Dexterity Vest", 10, 1);
+        zero.update_quality();
+        assertEquals(0,zero.getQuality());
+    }
+
+    @Test
+    public void testQualityEqualsOneNegativeSellIn(){
+        NormalItem zero = new NormalItem("+5 Dexterity Vest", -1, 1);
+        zero.update_quality();
+        assertEquals(0,zero.getQuality());
+    }
+
+    @Test
+    public void testQualityEqualsZero(){
+        NormalItem zero = new NormalItem("+5 Dexterity Vest", 10, 0);
+        zero.update_quality();
+        assertEquals(0,zero.getQuality());
+    }
+
+    @Test
+    public void testQualityEqualsZeroNegativeSellIn(){
+        NormalItem zero = new NormalItem("+5 Dexterity Vest", -1, 0);
+        zero.update_quality();
+        assertEquals(0,zero.getQuality());
+    }
+
 
 }
