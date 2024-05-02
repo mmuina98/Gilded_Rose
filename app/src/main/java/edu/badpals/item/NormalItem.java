@@ -7,6 +7,14 @@ public class NormalItem extends Item implements Updateable{
          super(name,sellIn, quality);
     }
 
+    public int getQuality(){
+         return this.quality;
+    }
+
+    public int getSellIn(){
+        return this.sellIn;
+    }
+
     @Override
     public void update_item() {
          this.sellIn -= 1;
