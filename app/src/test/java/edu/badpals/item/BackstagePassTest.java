@@ -158,7 +158,7 @@ public class BackstagePassTest {
     }
 
     @Test
-    public void testQualityUnder0DaysLimit48(){
+    public void testQualityUnder0DaysLimit47(){
         BackstagePass zero = new BackstagePass("Backstage passes to a TAFKAL80ETC concert", -1, 48);
         zero.update_quality();
         assertEquals(0,zero.getSellIn()) ;
