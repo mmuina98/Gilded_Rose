@@ -19,6 +19,7 @@ public class AgedBrieTest {
         zero.update_quality();
         assertEquals(22,zero.getQuality()) ;
     }
+
     @Test
     public void testSellInPositive(){
         AgedBrie zero = new AgedBrie("Aged Brie", 10, 20);
