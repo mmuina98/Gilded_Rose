@@ -3,7 +3,7 @@ package edu.badpals.item;
 public class Sulfuras extends Item implements Updateable{
 
     public Sulfuras(String name, int sellIn, int quality) {
-        super(name, sellIn, quality);
+        super(name, sellIn, quality = 80);
     }
 
     @Override
@@ -24,5 +24,6 @@ public class Sulfuras extends Item implements Updateable{
     @Override
     public void update_quality() {
         // LEEEEEEEEEEEEEEEEEEEEEEEEEEROY JEEEEEEEEEEEEEEEEEENKINS
+        this.quality = 80;
     }
 }

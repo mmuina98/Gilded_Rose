@@ -19,7 +19,6 @@ public class AgedBrie extends Item implements Updateable  {
     @Override
     public void update_item() {
         this.sellIn -= 1;
-
     }
 
     @Override

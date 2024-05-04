@@ -10,7 +10,7 @@ public class SulfurasTest {
     public void testSellInUpdate(){
         Sulfuras zero = new Sulfuras("Sulfuras, Hand of Ragnaros", 0, 80);
         zero.update_item();
-        assertEquals(9,zero.getSellIn()) ;
+        assertEquals(0,zero.getSellIn()) ;
     }
 
     @Test
