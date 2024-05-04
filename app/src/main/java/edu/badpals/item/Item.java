@@ -16,6 +16,6 @@ public class Item {
 
     @Override
     public String toString() {
-        return "[" + this.name +"]" +"\nCaducidad -> " + this.sellIn + " Días" +"\nValor -> " + this.quality + " €$\n";
+        return "[" + this.name +"]" +"\nCaducidad -> " + this.sellIn + " Dias" +"\nValor -> " + this.quality + " $\n";
     }
 }
