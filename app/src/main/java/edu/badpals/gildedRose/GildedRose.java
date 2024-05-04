@@ -1,4 +1,4 @@
-package edu.badpals;
+package edu.badpals.gildedRose;
 
 import edu.badpals.item.Updateable;
 
@@ -9,7 +9,11 @@ public class GildedRose {
     public GildedRose() {
     }
 
-    ArrayList<Updateable> inventory = new ArrayList<>();
+    private final ArrayList<Updateable> inventory = new ArrayList<>();
+
+    public ArrayList<Updateable> getInventory() {
+        return inventory;
+    }
 
     public void addItem(Updateable item) {
         inventory.add(item);
