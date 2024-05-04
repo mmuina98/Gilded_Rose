@@ -3,7 +3,7 @@ package edu.badpals.item;
 public class NormalItem extends Item implements Updateable{
 
 
-     NormalItem(String name, int sellIn, int quality) {
+    public NormalItem(String name, int sellIn, int quality) {
          super(name,sellIn, quality);
     }
 
@@ -20,15 +20,14 @@ public class NormalItem extends Item implements Updateable{
     @Override
     public void update_item() {
          this.sellIn -= 1;
-
     }
 
     @Override
     public void update_quality() {
 
-         if (this.sellIn <= 0){
+         if (this.sellIn <= 0 && this.quality >=2){
              this.quality -= 2 ;
-         } else {
+         } else if (this.quality >=1){
              this.quality -= 1 ;
          }
 

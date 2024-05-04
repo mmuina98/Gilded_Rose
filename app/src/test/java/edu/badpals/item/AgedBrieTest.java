@@ -32,5 +32,39 @@ public class AgedBrieTest {
         assertEquals(22,zero.getQuality()) ;
     }
 
+    @Test
+    public void testQualityEqualsOne(){
+        AgedBrie zero = new AgedBrie("Aged Brie", 10, 49);
+        zero.update_quality();
+        assertEquals(50,zero.getQuality());
+    }
+
+    @Test
+    public void testQualityEqualsOneNegativeSellIn(){
+        AgedBrie zero = new AgedBrie("Aged Brie", 10, 50);
+        zero.update_quality();
+        assertEquals(50,zero.getQuality());
+    }
+
+    @Test
+    public void testQualityEqualsZero(){
+        AgedBrie zero = new AgedBrie("Aged Brie", -1, 49);
+        zero.update_quality();
+        assertEquals(50,zero.getQuality());
+    }
+
+    @Test
+    public void testQualityEqualsZeroNegativeSellIn(){
+        AgedBrie zero = new AgedBrie("Aged Brie", -1, 50);
+        zero.update_quality();
+        assertEquals(50,zero.getQuality());
+    }
+
+    @Test
+    public void testQualityEqualsZeroNegativeSellIn1(){
+        AgedBrie zero = new AgedBrie("Aged Brie", -1, 48);
+        zero.update_quality();
+        assertEquals(50,zero.getQuality());
+    }
 
 }
